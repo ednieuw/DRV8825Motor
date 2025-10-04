@@ -30,7 +30,7 @@ Stepper motor coils are connected with a connector.
 The Arduino is powered via the USB-cable
 IN1-IN4 are connected to pin 8, 9 ,10 and 11
 
-<img alt="NEMA DRV8825"  src="DRV8825_files/image010.jpg" width="250" /><br />
+<img alt="NEMA DRV8825"  src="DRV8825_files/image010.jpg" width="450" /><br />
 
 The rotary encoder is connected to Arduino pin 2, CLS, 3 DT, 4 SW, + to 5v and - to GND
 ```
