@@ -49,6 +49,8 @@ A1, A2, B1, B2	Stepper motor
 The motor power supply shall be connected to VMOT and GND (top right).
 Stepper motor coils shall be connected to A1, A2, B1, and B2 as indicated in the pinout diagram.
 
+<img alt="NEMA DRV8825"  src="DRV8825_files/image003.jpg" width="250" /><br />
+
 The GND pin (bottom right) must be connected to the microcontroller ground reference. VDD shall be connected to the 5 V logic supply.
 The STP (step) and DIR (direction) pins are connected to digital pins 3 and 2, respectively. Alternate digital pins may be used if defined accordingly in software.
 
