@@ -23,13 +23,14 @@ IN4	            Pin 11 Arduino
 –	            GND power supply
 +	            5 V power supply
 ```
+
 The motor power supply is 5V and be connected to + and GND to -. You can use a USB 5V power supply of 1A
 Stepper motor coils are connected with a connector.
 
 The Arduino is powered via the USB-cable
 IN1-IN4 are connected to pin 8, 9 ,10 and 11
 
-
+<img alt="NEMA DRV8825"  src="DRV8825_files/image010.jpg" width="250" /><br />
 
 The rotary encoder is connected to Arduino pin 2, CLS, 3 DT, 4 SW, + to 5v and - to GND
 ```
