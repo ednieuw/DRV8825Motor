@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title># DRV8825Motor&nbsp; NEMA17 with DRV8</title>
+</head>
+
+<body>
+
+<p># DRV8825Motor<br />
+<br />
+NEMA17 with DRV8825 and 28BYJ-48 Stepper Motor with ULN2003<br />
+<br />
+There is one sketch and with a #define the motor type / driver is selected.<br />
+A rotary encoder controls the microstepper mode and rotation speed. <br />
+<br />
+<br />
+ULN2003 <br />
+Driver Board Connection<br />
+IN1 Pin 8 Arduino<br />
+IN2 Pin 9 Arduino<br />
+IN3 Pin 10 Arduino<br />
+IN4 Pin 11 Arduino<br />
+– GND power supply<br />
++ 5 V power supply<br />
+<br />
+The motor power supply is 5V and be connected to + and GND to -. You can use a 
+USB 5V power supply of 1A<br />
+Stepper motor coils are connected with a connector.<br />
+<br />
+The Arduino is powered via the USB-cable<br />
+IN1-IN4 are connected to pin 8, 9 ,10 and 11<br />
+<br />
+--------------------------------------------<br />
+<br />
+The rotary encoder is connected to Arduino pin 2, CLS, 3 DT, 4 SW, + to 5v and - 
+to GND<br />
+<br />
+CLK Pin 2 Arduino<br />
+DT Pin 3 Arduino<br />
+SW Pin 4 Arduino<br />
+– GND pin Arduino<br />
++ 5V pin Arduino<br />
+<br />
+--------------------------------------------<br />
+<br />
+DRV8825 Connections<br />
+DRV8825 Connection<br />
+VMOT 8 - 45 V<br />
+GND Motor ground<br />
+SLP 5 V<br />
+RST 5 V<br />
+GND Logic ground<br />
+STP Pin 3<br />
+DIR Pin 2<br />
+A1, A2, B1, B2 Stepper motor<br />
+<br />
+The motor power supply shall be connected to VMOT and GND (top right).<br />
+Stepper motor coils shall be connected to A1, A2, B1, and B2 as indicated in the 
+pinout diagram.<br />
+<br />
+The GND pin (bottom right) must be connected to the microcontroller ground 
+reference. VDD shall be connected to the 5 V logic supply.<br />
+The STP (step) and DIR (direction) pins are connected to digital pins 3 and 2, 
+respectively. Alternate digital pins may be used if defined accordingly in 
+software.<br />
+<br />
+The RST (reset) and SLP (sleep) pins must be tied to 5 V to enable the driver.<br />
+The EN (enable) pin is internally pulled low and may remain unconnected. When 
+driven high, the driver is disabled.<br />
+<br />
+The FAULT output is an open-drain signal that asserts low when the H-bridge FETs 
+are disabled due to overcurrent protection or thermal shutdown. This pin is not 
+utilized in this configuration.</p>
+
+</body>
+
+</html>
