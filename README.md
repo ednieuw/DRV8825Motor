@@ -2,16 +2,22 @@
 
 NEMA17 with DRV8825 and 28BYJ-48 Stepper Motor with ULN2003
 
-There is one sketch and with a #define the motor type / driver is selected.
+This sketch can be used for both motor types. 
+With a #define the motor type / driver is selected.
+
 ```
 // ********************************* select only NEMA or BYJ
 //#define NEMA
 #define BYJ
 // **********************************
 ```
-A rotary encoder controls the microstepper mode and rotation speed. 
-The motor will start running when the rotary shaft is turn left or right
-Microstepping mode can be selected by pressing the shaft.
+A KY-040 rotary encoder controls the microstepper mode and rotation speed. 
+The motor will start running when the rotary shaft is turned left or right in- or decreasing rotor speed.
+
+Microstepping mode can be selected by pressing the shaft. 
+When the motor is not running smoothly try a higher microstepping mode. 
+Motor speed will then decrease and step precision increase.
+
 The motor can be stopped immediatly by pressing the shaft >1 second.
 ```
 ULN2003 
@@ -24,15 +30,17 @@ IN4	            Pin 11 Arduino
 +	            5 V power supply
 ```
 
-The motor power supply is 5V and be connected to + and GND to -. You can use a USB 5V power supply of 1A
-Stepper motor coils are connected with a connector.
+The motor power supply is 5V and be connected to + and GND to -. 
+A USB 5V power supply of 1A is sufficient to drive the motor.
+The stepper motor coils M0-M4 are connected with a connector.
 
-The Arduino is powered via the USB-cable
-IN1-IN4 are connected to pin 8, 9 ,10 and 11
+The Arduino is powered via the USB-cable.
+IN1-IN4 are connected to pin 8, 9 ,10 and 11.
+In a definitive setting it is wise to connect GND of the Arduino to - (GND) of the driver board. 
 
 <img alt="NEMA DRV8825"  src="DRV8825_files/image010.jpg" width="450" /><br />
 
-The rotary encoder is connected to Arduino pin 2, CLS, 3 DT, 4 SW, + to 5v and - to GND
+The rotary encoder is connected to Arduino pin: 2 - CLK, 3 - DT, 4 - SW, + to 5v and - to GND
 ```
 CLK	            Pin 2 Arduino
 DT 	            Pin 3 Arduino
@@ -42,7 +50,6 @@ SW 	            Pin 4 Arduino
 ```
 <img alt="NEMA DRV8825"  src="DRV8825_files/image009.png" width="450" /><br />
 
-height="436"
 ```
 DRV8825 Connections
 DRV8825	Connection
@@ -59,13 +66,15 @@ M1      Pin 9      // microstep pin
 M2      Pin 10     // microstep pin
 A1, A2, B1, B2	Stepper motor
 ```
-The motor power supply shall be connected to VMOT and GND (top right).
-Stepper motor coils shall be connected to A1, A2, B1, and B2 as indicated in the pinout diagram.
+The motor power supply is connected to VMOT and GND (top right).
+Stepper motor coils are connected to A1, A2, B1, and B2 as indicated in the pinout diagram.
 
 <img alt="NEMA DRV8825"  src="DRV8825_files/image003.jpg" width="250" /><br />
 
-The GND pin (bottom right) must be connected to the microcontroller ground reference. VDD shall be connected to the 5 V logic supply.
-The STP (step) and DIR (direction) pins are connected to digital pins 3 and 2, respectively. Alternate digital pins may be used if defined accordingly in software.
+The GND pin (bottom right) must be connected to the microcontroller ground reference. 
+VDD is connected to the 5 V logic supply.
+The STP (step) and DIR (direction) pins are connected to digital pins 3 and 2, respectively. 
+Alternate digital pins may be used if defined accordingly in software.
 
 The RST (reset) and SLP (sleep) pins must be tied to 5 V to enable the driver.
 The EN (enable) pin is internally pulled low and is connected to pin 5. When driven high, the driver is disabled and the motor can be turned freely. Otherwise it will stay powered and the shaft is difficult to rotate by hand.
