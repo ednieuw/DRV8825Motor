@@ -1,6 +1,6 @@
-# DRV8825Motor
+# DRV8825/ULN2003 driver with stepper motor
 
-NEMA17 with DRV8825 and 28BYJ-48 Stepper Motor with ULN2003
+Arduino sketch to operate a NEMA17 with DRV8825 and 28BYJ-48 with ULN2003 Stepper motor.
 
 This sketch can be used for both motor types. 
 With a #define the motor type / driver is selected.
